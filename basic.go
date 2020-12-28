@@ -17,6 +17,10 @@ func main() { // Function
 		fmt.Println(i, card)
 	}
 	//fmt.Println(cards)
+
+	// Byte slice
+	val := []byte("Hi there")
+	fmt.Println(val)
 }
 
 func newCard() string { // return type comes after fun name

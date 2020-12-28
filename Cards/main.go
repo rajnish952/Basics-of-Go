@@ -2,12 +2,17 @@ package main
 
 func main() {
 
-	cards := deck{"Ace of Spades", newCard()}
+	cards := newDeck()
 
-	cards.print()
+	// Return two deck types, one assigned to hands other to remaining
+	//hand, remainingDeck := deal(cards, 5)
+	//hand.print()
+	//remainingDeck.print()
 
-}
-
-func newCard() string {
-	return "Ace of Diamonds"
+	// fmt.Println(hand.toString())
+	cards.saveToFile("MyCards.txt")
+	newCards := newDeckFromFile("MyCards.txt")
+	newCards.shuffle()
+	newCards.print()
+	// fmt.Println(newCards)
 }
